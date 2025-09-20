@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revved Up Wraps - Professional Vehicle Wrapping | Loveland, CO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .business-card {
+            background: #000000;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(255, 0, 0, 0.3), 0 0 40px rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 2px solid #ff0000;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff0000, #660000, #000000);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid #ff0000;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 0, 0, 0.2);
+            border: 2px dashed #ff0000;
+            border-radius: 10px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .business-name {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            background: rgba(255, 0, 0, 0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 2px dashed #ff0000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .location {
+            font-size: 1rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .content {
+            padding: 40px 30px;
+            color: #fff;
+        }
+
+        .owners {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #333333, #000000);
+            border-radius: 15px;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .owners h2 {
+            color: #ff0000;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .owner-names {
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .services {
+            margin-bottom: 40px;
+        }
+
+        .services h3 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .service-item {
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-item h4 {
+            color: #ff0000;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .service-item p {
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+
+        .brands {
+            margin-bottom: 40px;
+        }
+
+        .brands h3 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .brand-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .brand-item {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #000000, #333333);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .contact h3 {
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            color: #ff0000;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 0, 0, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .contact-placeholder {
+            background: rgba(255, 0, 0, 0.2);
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 2px dashed #ff0000;
+            font-style: italic;
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #ff0000, #000000, #ff0000);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+        }
+
+        .cta h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .cta p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffffff, #cccccc);
+            color: #000000;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #000000;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .business-name {
+                font-size: 2rem;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="business-card">
+            <div class="header">
+                <div class="logo-container">
+                    <img src="revved-up-logo.png" alt="Revved Up Wraps Logo" class="logo">
+                </div>
+                <h1 class="business-name">Revved Up Wraps</h1>
+                <p class="tagline">Professional Vehicle Wrapping & Paint Protection</p>
+                <div class="location">
+                    <span>📍</span>
+                    <span>Serving Loveland, Colorado & Surrounding Areas</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="owners">
+                    <h2>Wrapping Experts</h2>
+                    <div class="owner-names">Christine & Brooklyn Roath</div>
+                </div>
+
+                <div class="services">
+                    <h3>Our Services</h3>
+                    <div class="service-grid">
+                        <div class="service-item">
+                            <div class="service-icon">🚗</div>
+                            <h4>Full Vehicle Wraps</h4>
+                            <p>Complete vehicle transformations with premium materials and precision installation</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">🚛</div>
+                            <h4>Commercial Vehicles</h4>
+                            <p>Professional fleet wrapping and business branding for maximum impact</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">🛡️</div>
+                            <h4>Paint Protection</h4>
+                            <p>Clear protective films to preserve your vehicle's original finish</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brands">
+                    <h3>Premium Brands We Use</h3>
+                    <div class="brand-list">
+                        <div class="brand-item">3M</div>
+                        <div class="brand-item">Cheetah</div>
+                        <div class="brand-item">KPMF</div>
+                        <div class="brand-item">Avery Dennison</div>
+                        <div class="brand-item">Orafol</div>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <h3>Schedule a Consultation Now</h3>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span>📱</span>
+                            <span>970-685-4630</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>✉️</span>
+                            <span>lukesautocare1201@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>📸</span>
+                            <a href="https://www.instagram.com/revvedupwraps/" target="_blank" style="color: #ff0000; text-decoration: none; font-weight: bold;">@revvedupwraps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
