@@ -244,13 +244,6 @@
             background: rgba(255, 0, 0, 0.1);
             border: 1px solid #ff0000;
             border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: rgba(255, 0, 0, 0.2);
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
         }
 
         .contact-placeholder {
@@ -261,6 +254,47 @@
             font-style: italic;
             color: #ff0000;
             font-weight: bold;
+        }
+
+        .qr-section {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #000000, #333333);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .qr-section h3 {
+            color: #ff0000;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #qr-code {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 3px solid #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+
+        .qr-container p {
+            color: #cccccc;
+            font-size: 0.9rem;
+            margin: 0;
         }
 
         .cta {
@@ -406,6 +440,16 @@
                             <span>📸</span>
                             <a href="https://www.instagram.com/revvedupwraps/" target="_blank" style="color: #ff0000; text-decoration: none; font-weight: bold;">@revvedupwraps</a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="qr-section">
+                    <h3>Share This Card</h3>
+                    <div class="qr-container">
+                        <div id="qr-code">
+                            <img src="qr-code.png" alt="QR Code for Revved Up Wraps Business Card" style="width: 200px; height: 200px; display: block;">
+                        </div>
+                        <p>Scan to share our business card</p>
                     </div>
                 </div>
             </div>
